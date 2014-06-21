@@ -1,4 +1,5 @@
 ActiveAdmin.register Acqereurrecherche do
+  permit_params :type_de_bien, :chambre
 
   
   # See permitted parameters documentation:
