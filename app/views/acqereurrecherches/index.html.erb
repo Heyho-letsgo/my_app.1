@@ -1,0 +1,31 @@
+<h1>Listing acqereurrecherches</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Acquereur</th>
+      <th>Type de bien</th>
+      <th>Chambre</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @acqereurrecherches.each do |acqereurrecherch| %>
+      <tr>
+        <td><%= acqereurrecherch.acquereur %></td>
+        <td><%= acqereurrecherch.type_de_bien %></td>
+        <td><%= acqereurrecherch.chambre %></td>
+        <td><%= link_to 'Show', acqereurrecherch %></td>
+        <td><%= link_to 'Edit', edit_acqereurrecherch_path(acqereurrecherch) %></td>
+        <td><%= link_to 'Destroy', acqereurrecherch, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Acqereurrecherche', new_acqereurrecherch_path %>

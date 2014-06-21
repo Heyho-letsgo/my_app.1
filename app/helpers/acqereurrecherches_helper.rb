@@ -1,0 +1,2 @@
+module AcqereurrecherchesHelper
+end

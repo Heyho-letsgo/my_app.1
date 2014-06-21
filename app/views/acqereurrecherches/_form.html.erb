@@ -1,0 +1,13 @@
+<%= simple_form_for(@acqereurrecherch) do |f| %>
+  <%= f.error_notification %>
+
+  <div class="form-inputs">
+    <%= f.association :acquereur %>
+    <%= f.input :type_de_bien %>
+    <%= f.input :chambre %>
+  </div>
+
+  <div class="form-actions">
+    <%= f.button :submit %>
+  </div>
+<% end %>
