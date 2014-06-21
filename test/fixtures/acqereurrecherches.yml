@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  acquereur_id: 
+  type_de_bien: MyString
+  chambre: 1
+
+two:
+  acquereur_id: 
+  type_de_bien: MyString
+  chambre: 1
