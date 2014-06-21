@@ -1,19 +1,26 @@
-<p id="notice"><%= notice %></p>
+<%- model_class = Acqereurrecherche -%>
+<div class="page-header">
+  <h1><%=t '.title', :default => Acqereurrecherche %></h1>
+</div>
 
-<p>
-  <strong>Acquereur:</strong>
-  <%= @acqereurrecherch.acquereur %>
-</p>
+<div class="fieldset">
+  <dl>
+      <dt class="label label-default"><%= model_class.human_attribute_name(:type_de_bien) %></dt>
+      <dd><pre class="prettyprint"><%= @acqereurrecherche.type_de_bien %></pre></dd>
+      <dt class="label label-default"><%= model_class.human_attribute_name(:chambre) %></dt>
+      <dd><pre class="prettyprint"><%= @acqereurrecherche.chambre %></pre></dd>
+  </dl>
+</div>
 
-<p>
-  <strong>Type de bien:</strong>
-  <%= @acqereurrecherch.type_de_bien %>
-</p>
+<div class="form-group">
+  <%= link_to t('.back', :default => t("helpers.links.back")),
+              acqereurrecherches_path, :class => 'btn btn-default'  %>
+  <%= link_to t('.edit', :default => t("helpers.links.edit")),
+              edit_acqereurrecherche_path(@acqereurrecherche), :class => 'btn btn-default' %>
+  <%= link_to t('.destroy', :default => t("helpers.links.destroy")),
+              acqereurrecherche_path(@acqereurrecherche),
+              :method => 'delete',
+              :data => { :confirm => t('.confirm', :default => t("helpers.links.confirm", :default => 'Are you sure?')) },
+              :class => 'btn btn-danger' %>
+</div>
 
-<p>
-  <strong>Chambre:</strong>
-  <%= @acqereurrecherch.chambre %>
-</p>
-
-<%= link_to 'Edit', edit_acqereurrecherch_path(@acqereurrecherch) %> |
-<%= link_to 'Back', acqereurrecherches_path %>
