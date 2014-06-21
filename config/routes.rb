@@ -1,4 +1,5 @@
 MyApp::Application.routes.draw do
+  get "acceuilroutes/index"
   resources :acquereurs
 
   resources :acqereurrecherches
