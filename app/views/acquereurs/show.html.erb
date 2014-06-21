@@ -1,0 +1,24 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Prenom:</strong>
+  <%= @acquereur.prenom %>
+</p>
+
+<p>
+  <strong>Nom:</strong>
+  <%= @acquereur.nom %>
+</p>
+
+<p>
+  <strong>Telephone:</strong>
+  <%= @acquereur.telephone %>
+</p>
+
+<p>
+  <strong>Email:</strong>
+  <%= @acquereur.email %>
+</p>
+
+<%= link_to 'Edit', edit_acquereur_path(@acquereur) %> |
+<%= link_to 'Back', acquereurs_path %>

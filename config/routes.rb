@@ -1,4 +1,6 @@
 MyApp::Application.routes.draw do
+  resources :acquereurs
+
   resources :acqereurrecherches
 
   devise_for :users, controllers: {registrations: "users/registrations", sessions: "users/sessions", passwords: "users/passwords"}, skip: [:sessions, :registrations]

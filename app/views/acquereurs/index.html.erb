@@ -1,0 +1,33 @@
+<h1>Listing acquereurs</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Prenom</th>
+      <th>Nom</th>
+      <th>Telephone</th>
+      <th>Email</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @acquereurs.each do |acquereur| %>
+      <tr>
+        <td><%= acquereur.prenom %></td>
+        <td><%= acquereur.nom %></td>
+        <td><%= acquereur.telephone %></td>
+        <td><%= acquereur.email %></td>
+        <td><%= link_to 'Show', acquereur %></td>
+        <td><%= link_to 'Edit', edit_acquereur_path(acquereur) %></td>
+        <td><%= link_to 'Destroy', acquereur, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Acquereur', new_acquereur_path %>
